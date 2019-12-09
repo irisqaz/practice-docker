@@ -55,7 +55,7 @@ finally,
 ```
 
 The attempt will fail, because running a container means running
-a program, an which we don't yet have, as its filesystem is empty
+a program, which we don't yet have, as its filesystem is empty
 
 ```shell
 $ docker container run --rm empty:latest
@@ -79,10 +79,8 @@ $ docker container run --rm empty:latest ls
 
 We get the error:
 
-```shell
-docker: Error response from daemon: OCI runtime create failed:
-container_linux.go:346: starting container process caused "exec:
-\"ls\": executable file not found in $PATH": unknown.
+```
+"exec:\"ls\": executable file not found in $PATH": unknown.
 ```
 
 Then we need to put the `ls` program in our container . . .
@@ -141,7 +139,7 @@ $ ./ls
 $
 ```
 
-Now, that we have a program, let's package it into a new container:
+Now, that we have a program, let's package it into a new image:
 
 
 ```
