@@ -2,11 +2,11 @@
 
 Repeat the exercises from ex1, but instead of packaging a filesystem in a tar file, use the Dockerfile directives to do the same.
 
-1. [Image with empty filesystem](https://github.com/irisqaz/practice-docker/blob/master/ex1/ex1.md#1-image-with-empty-filesystem)
+1. [Image with empty filesystem](https://github.com/irisqaz/practice-docker/blob/master/ex2/ex2.md#1-image-with-empty-filesystem)
 
-2. [Image with one program and CMD](https://github.com/irisqaz/practice-docker/blob/master/ex1/ex1.md#2-image-with-one-program)
+2. [Image with one program and CMD](https://github.com/irisqaz/practice-docker/blob/master/ex2/ex2.md#2-image-with-one-program-and-cmd)
 
-3. [Image with one program and ENTRYPOINT](https://github.com/irisqaz/practice-docker/blob/master/ex1/ex1.md#2-image-with-one-program)
+3. [Image with one program and ENTRYPOINT](https://github.com/irisqaz/practice-docker/blob/master/ex2/ex2.md#3-image-with-one-program-and-entrypoint)
 
 ## 1. Image with empty filesystem 
 
