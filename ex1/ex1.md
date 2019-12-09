@@ -1,8 +1,8 @@
 # First images and containers
 
-1. [Image with empty filesystem](https://github.com/irisqaz/practice-docker/blob/master/README.md#image-with-empty-filesystem)
+1. [Image with empty filesystem](https://github.com/irisqaz/practice-docker/blob/master/ex1/ex1.md#1-image-with-empty-filesystem)
 
-2. [Image with one program](https://github.com/irisqaz/practice-docker/blob/master/README.md#image-with-one-program)
+2. [Image with one program](https://github.com/irisqaz/practice-docker/blob/master/ex1/ex1.md#2-image-with-one-program)
 
 ## 1. Image with empty filesystem
 
@@ -87,7 +87,7 @@ container_linux.go:346: starting container process caused "exec:
 
 Then we need to put the `ls` program in our container . . .
 
-## Image with one program
+## 2. Image with one program
 
 ```
 (tar file with program) --> [Docker] --> image
