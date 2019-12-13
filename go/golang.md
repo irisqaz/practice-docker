@@ -63,7 +63,7 @@ import "fmt"
 func main(){
     fmt.Printf("hello, world\n")
 }
-ctrl+d
+<ctrl+d>
 $ cat hello.go
 ```
 
@@ -96,3 +96,42 @@ $ ./hello
 bash: ./hello: cannot execute binary file
 ```
 
+# 2. Create an image for hello-world
+
+```
+(Dockerfile and program) --> [Docker] --> image
+```
+Package your `hello` Linux executable in a Linux container image by creating a Dockerfile in an empty directory along with the `hello` program:
+
+```
+$ mkdir bin
+$ cp hello bin/
+$ cd bin
+$ cat > Dockerfile
+FROM scratch
+COPY hello /
+CMD ["/hello"]
+<ctrl+d>
+$ cat Dockerfile
+FROM scratch
+COPY hello /
+CMD ["/hello"]
+```
+Now, build the image `hello:latest`:
+
+```
+$ docker image build -t hello:latest .
+$ docker image ls
+REPOSITORY TAG     SIZE
+hello      latest  2.03MB
+. . .
+$
+```
+
+Run your `hello` container:
+
+```
+$ docker container run --rm -it hello
+hello, world!
+$
+```
