@@ -104,9 +104,9 @@ bash: ./hello: cannot execute binary file
 Package your `hello` Linux executable in a Linux container image by creating a Dockerfile in an empty directory along with the `hello` program:
 
 ```
-$ mkdir bin
-$ cp hello bin/
-$ cd bin
+$ mkdir docker
+$ cp hello docker/
+$ cd docker
 $ cat > Dockerfile
 FROM scratch
 COPY hello /
