@@ -46,7 +46,7 @@ $ docker container run --rm -it -v $(pwd):/go/src/hello go-img
     # cd /go/src/hello
     # ls
     helloWeb.go
-    # CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo -ldflags '-w' .
+    # CGO_ENABLED=0 go build
     # ls
     hello   helloWeb.go
     # exit
@@ -89,7 +89,7 @@ $
 Run your `hello-web` container:
 
 ```
-$ docker container run --name web --rm -d hello-web
+$ docker container run --name web --rm -d -p 8080:8080 hello-web
 . . .
 $ docker container ls
 IMAGE     COMMAND   STATUS         NAMES
