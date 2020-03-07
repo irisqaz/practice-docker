@@ -22,7 +22,24 @@ Enter password:
 | performance_schema |
 +--------------------+
 
-...# 
+...# mysql -u root -p
+Enter password:  
+. . .
+MariaDB [(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
++--------------------+
+3 rows in set (0.001 sec)
+
+MariaDB [(none)]> 
+
 
 ```
+
+## Persist Changes
+
 
