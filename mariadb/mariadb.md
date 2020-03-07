@@ -77,6 +77,15 @@ MariaDB [Practice]> SHOW TABLES;
 +--------------------+
 1 row in set (0.001 sec)
 
+MariaDB [Practice]> DESCRIBE Done;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| task  | varchar(100) | NO   |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+2 rows in set (0.002 sec)
+
 MariaDB [Practice]> 
 
 ```
