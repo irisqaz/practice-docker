@@ -124,6 +124,15 @@ The `mysql` client that we used above was running within the same container.
 
 We can use a separate container to connect back to the server.
 
+Before, determine the ip address of the container:
+
+```
+$ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mdb
+172.17.0.2
+$
+```
+
+Run a separate container:
 ```
 $ docker container run --rm -it mdb bash
 # mysql -h 172.17.0.2 -P 3306 --protocol=TCP -u root -p
