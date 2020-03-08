@@ -11,12 +11,11 @@
 ```
 $ mkdir mariadb && cd $_
 
-$ docker container run -d --rm \
-  --name mdb -e \
-  MYSQL_ROOT_PASSWORD=your-new-pwd \
-  -p 3306:3306 \
-  -v ${PWD}:/var/lib/mysql \
-  mdb
+$ docker run -d --rm \
+> --name mdb \
+> -e MYSQL_ROOT_PASSWORD=changeme \
+> -v ${PWD}:/var/lib/mysql \
+> mdb
   
 $ docker container exec -it mdb bash
 ...# mysql -p -e "SHOW DATABASES;"
