@@ -41,14 +41,14 @@ MariaDB [(none)]>
 ## Create a Database
 
 ```
-MariaDB [(none)]> CREATE DATABASE Practice;
+MariaDB [(none)]> CREATE DATABASE practice;
 Query OK, 1 row affected (0.003 sec)
 
 MariaDB [(none)]> SHOW DATABASES;
 +--------------------+
 | Database           |
 +--------------------+
-| Practice               |
+| practice               |
 | information_schema |
 | mysql              |
 | performance_schema |
@@ -61,23 +61,23 @@ MariaDB [(none)]>
 ## Create a Table
 
 ```
-MariaDB [(none)]> USE Practice;
+MariaDB [(none)]> USE practice;
 Database changed
-MariaDB [Practice]> CREATE TABLE Done(
+MariaDB [practice]> CREATE TABLE done(
     -> id INT NOT NULL AUTO_INCREMENT,
     -> task VARCHAR(100) NOT NULL,
     -> PRIMARY KEY (id));
 Query OK, 0 rows affected (0.020 sec)
 
-MariaDB [Practice]> SHOW TABLES;
+MariaDB [practice]> SHOW TABLES;
 +--------------------+
 | Tables_in_Practice |
 +--------------------+
-| Done               |
+| done               |
 +--------------------+
 1 row in set (0.001 sec)
 
-MariaDB [Practice]> DESCRIBE Done;
+MariaDB [practice]> DESCRIBE done;
 +-------+--------------+------+-----+---------+----------------+
 | Field | Type         | Null | Key | Default | Extra          |
 +-------+--------------+------+-----+---------+----------------+
@@ -86,18 +86,18 @@ MariaDB [Practice]> DESCRIBE Done;
 +-------+--------------+------+-----+---------+----------------+
 2 rows in set (0.002 sec)
 
-MariaDB [Practice]> 
+MariaDB [practice]> 
 
 ```
 ## Insert a row
 
 ```
-MariaDB [Practice]> INSERT INTO Done
+MariaDB [practice]> INSERT INTO done
     -> (id, task)
     -> VALUES(1, 'walked for 1 hour');
 Query OK, 1 row affected (0.013 sec)
 
-MariaDB [Practice]> SELECT * from Done;
+MariaDB [practice]> SELECT * from done;
 +----+-------------------+
 | id | task              |
 +----+-------------------+
@@ -105,7 +105,7 @@ MariaDB [Practice]> SELECT * from Done;
 +----+-------------------+
 1 row in set (0.002 sec)
 
-MariaDB [Practice]>
+MariaDB [practice]>
 ```
 
 
