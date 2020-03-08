@@ -108,4 +108,38 @@ MariaDB [practice]> SELECT * from done;
 MariaDB [practice]>
 ```
 
+## Connect Externally
+
+The `mysql` client that we used above was running within the same container.
+
+We can use a separate container to connect back to the server.
+
+```
+$ docker container run --rm -it mdb bash
+# mysql -h 172.17.0.2 -P 3306 --protocol=TCP -u root -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 6
+Server version: 10.5.1-MariaDB-1:10.5.1+maria~bionic mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use practice
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MariaDB [practice]> show tables;
++--------------------+
+| Tables_in_Practice |
++--------------------+
+| done               |
++--------------------+
+1 row in set (0.001 sec)
+
+MariaDB [Practice]> 
+
+```
 
