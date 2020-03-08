@@ -89,6 +89,23 @@ MariaDB [Practice]> DESCRIBE Done;
 MariaDB [Practice]> 
 
 ```
-## Persist Changes
+## Insert a row
+
+```
+MariaDB [Practice]> INSERT INTO Done
+    -> (id, task)
+    -> VALUES(1, 'walked for 1 hour');
+Query OK, 1 row affected (0.013 sec)
+
+MariaDB [Practice]> SELECT * from Done;
++----+-------------------+
+| id | task              |
++----+-------------------+
+|  1 | walked for 1 hour |
++----+-------------------+
+1 row in set (0.002 sec)
+
+MariaDB [Practice]>
+```
 
 
