@@ -9,7 +9,15 @@
 ## Run
 
 ```
-$ docker container run --name mdb -e MYSQL_ROOT_PASSWORD=your-new-pwd -d --rm mdb
+$ mkdir mariadb && cd $_
+
+$ docker container run -d --rm \
+  --name mdb -e \
+  MYSQL_ROOT_PASSWORD=your-new-pwd \
+  -p 3306:3306 \
+  -v ${PWD}:/var/lib/mysql \
+  mdb
+  
 $ docker container exec -it mdb bash
 ...# mysql -p -e "SHOW DATABASES;"
 
@@ -35,7 +43,10 @@ MariaDB [(none)]> SHOW DATABASES;
 +--------------------+
 3 rows in set (0.001 sec)
 
-MariaDB [(none)]> 
+MariaDB [(none)]> exit
+# exit
+$ docker container stop mdb
+$
 ```
 
 ## Create a Database
